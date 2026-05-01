@@ -1,10 +1,11 @@
 import React from 'react'
+import LayoutMain from './components/layoutMain'
 
 function App() {
   return (
-    <div className='flex items-center justify-center'>
-      <h1 className='text-red-500'>hola mundo</h1>
-    </div>
+    <LayoutMain>
+      <h1 className='text-2xl font-semibold'>Hola mundo</h1>
+    </LayoutMain>
   )
 }
 
