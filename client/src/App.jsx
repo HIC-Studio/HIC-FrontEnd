@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import LayoutMain from "./components/layoutMain.jsx";
 import Header from "./components/header.jsx";
+import { InputStyled, Input } from "./components/inputs.jsx";
 
-const words = ["Agentes de IA", "CRM", "Facturación", "Gestión de Proyectos", "Automatización de Tareas", "Análisis de Datos"];
+const words = [
+  "Agentes de IA",
+  "CRM",
+  "Facturación",
+  "Gestión de Proyectos",
+  "Automatización de Tareas",
+  "Análisis de Datos",
+];
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -28,6 +36,7 @@ function App() {
         <div>
           <h1 className="text-3xl font-bold">Integración de proyectos de</h1>
         </div>
+
         <div>
           <h1
             className={`text-3xl font-bold transition-all duration-300 text-[var(--purple)] ${
@@ -36,6 +45,25 @@ function App() {
           >
             {words[index]}
           </h1>
+        </div>
+
+        <div>
+          <h1>
+            Maximiza y optimiza tu empresa con integraciones de Inteligencia
+            Artificial (AI) y proyectos CRM, somos HIC Studio...
+          </h1>
+        </div>
+        <div className="flex gap-x-5">
+          <InputStyled
+            type="button"
+            placeholder="Contactanos"
+            value="Contactanos"
+          />
+          <Input
+            type="button"
+            placeholder="Precios y planes"
+            value="Precios y planes"
+          />
         </div>
       </div>
     </LayoutMain>
