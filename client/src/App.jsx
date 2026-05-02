@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import LayoutMain from "./components/layoutMain.jsx";
 import Header from "./components/header.jsx";
 import { InputStyled, Input } from "./components/inputs.jsx";
+import AnimatedLogo from "./components/AnimatedLogo.jsx";
 
 const words = [
   "Agentes de IA",
@@ -32,38 +33,46 @@ function App() {
   return (
     <LayoutMain>
       <Header />
-      <div className="flex flex-col h-[85dvh] w-full justify-center items-center">
-        <div>
-          <h1 className="text-3xl font-bold">Integración de proyectos de</h1>
-        </div>
+      {/* DIV GENERAL */}
+      <div className="flex flex-row px-15 h-[85dvh] w-full justify-center items-center">
+        {/* DIV DE TEXTO */}
+        <div className="flex flex-col w-full h-full justify-center items-start">
+          <div>
+            <h1 className="text-3xl font-bold">Integración de proyectos de</h1>
+          </div>
 
-        <div>
-          <h1
-            className={`text-3xl font-bold transition-all duration-300 text-[var(--purple)] ${
-              fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-            }`}
-          >
-            {words[index]}
-          </h1>
-        </div>
+          <div>
+            <h1
+              className={`text-3xl font-bold transition-all duration-300 text-[var(--purple)] ${
+                fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+              }`}
+            >
+              {words[index]}
+            </h1>
+          </div>
 
-        <div>
-          <h1>
+          <h1 className="opacity-70 pt-4 text-md">
             Maximiza y optimiza tu empresa con integraciones de Inteligencia
             Artificial (AI) y proyectos CRM, somos HIC Studio...
           </h1>
+
+          <div className="flex gap-x-5 pt-10">
+            <InputStyled
+              type="button"
+              placeholder="Contactanos"
+              value="Contactanos"
+            />
+            <Input
+              type="button"
+              placeholder="Precios y planes"
+              value="Precios y planes"
+            />
+          </div>
         </div>
-        <div className="flex gap-x-5">
-          <InputStyled
-            type="button"
-            placeholder="Contactanos"
-            value="Contactanos"
-          />
-          <Input
-            type="button"
-            placeholder="Precios y planes"
-            value="Precios y planes"
-          />
+
+        {/* DIV DE IMAGEN */}
+        <div className="flex h-[100%] w-full w-full justify-center items-center">
+          <AnimatedLogo />
         </div>
       </div>
     </LayoutMain>
