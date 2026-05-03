@@ -36,7 +36,7 @@ export default function AnimatedLogo() {
       ref={svgRef}
       viewBox="0 0 110.88999938964844 42"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ width: "80%", height: "80%", overflow: "visible" }}
+      style={{ width: "70%", height: "70%", overflow: "visible" }}
     >
       <g transform="translate(0, 0.5) rotate(0 20 20.5)">
         <path

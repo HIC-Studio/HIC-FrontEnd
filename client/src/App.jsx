@@ -32,9 +32,8 @@ function App() {
 
   return (
     <LayoutMain>
-      <Header />
       {/* DIV GENERAL */}
-      <div className="flex flex-row px-15 h-[85dvh] w-full justify-center items-center">
+      <div className="flex flex-row px-15 w-full h-full w-full justify-center items-center">
         {/* DIV DE TEXTO */}
         <div className="flex flex-col w-full h-full justify-center items-start">
           <div>
@@ -51,7 +50,7 @@ function App() {
             </h1>
           </div>
 
-          <h1 className="opacity-70 pt-4 text-md">
+          <h1 className="opacity-70 pt-4 text-justify w-[75%] text-md">
             Maximiza y optimiza tu empresa con integraciones de Inteligencia
             Artificial (AI) y proyectos CRM, somos HIC Studio...
           </h1>
